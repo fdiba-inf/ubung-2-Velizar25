@@ -5,21 +5,20 @@ import java.util.Scanner;
 public class SumOfDigits {
 
   public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    
-    
-        int number = input.nextInt();
-        int a = number/100;
-        int b = (number/10) %10;
-        int c = number %10;
-        int sum = a + b + c;
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter a number: ");
+        int number = input.nextInt(); 
 
-        System.out.println(sum);
+         int firstDigit = number % 10;
+         number = number / 10;
+         int secondDigit = number % 10;
+         number = number / 10;
+         int thirdDigit = number % 10;
+         number = number / 10;
 
+         int sum = firstDigit + secondDigit + thirdDigit;
 
-
-    
+         System.out.println("Sum of digits: " + sum);
   }
-}
-  
-  
+}  
